@@ -1,3 +1,75 @@
+@-webkit-keyframes btnToUp {
+  0% {
+    opacity: 0;
+    transform: translateY(5rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0rem);
+  }
+}
+@keyframes btnToUp {
+  0% {
+    opacity: 0;
+    transform: translateY(5rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0rem);
+  }
+}
+@-webkit-keyframes leftToRight {
+  0% {
+    opacity: 0;
+    transform: translateX(-10rem);
+  }
+  85% {
+    transform: translateX(1rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0rem);
+  }
+}
+@keyframes leftToRight {
+  0% {
+    opacity: 0;
+    transform: translateX(-10rem);
+  }
+  85% {
+    transform: translateX(1rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0rem);
+  }
+}
+@-webkit-keyframes rightToLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(10rem);
+  }
+  85% {
+    transform: translateX(-1rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0rem);
+  }
+}
+@keyframes rightToLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(10rem);
+  }
+  85% {
+    transform: translateX(-1rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0rem);
+  }
+}
 *, ::after, ::before {
   margin: 0;
   padding: 0;
@@ -9,11 +81,6 @@ html {
 }
 
 body {
-  font-family: "Roboto";
-  font-weight: 400;
-  color: #777777;
-  font-size: 1.6rem;
-  letter-spacing: 0.2rem;
   padding: 5rem;
   background-color: #ffffff;
 }
@@ -22,37 +89,12 @@ body {
   background-color: #f7f7f7;
 }
 
-.header {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 95vh;
-  background: linear-gradient(90deg, rgba(186, 133, 84, 0.7) 0.03%, rgba(0, 0, 0, 0.7) 99.94%), url("../img/header-bg.jpg") center/cover no-repeat;
-  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%);
-          clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%);
-}
-.header__logo {
-  position: absolute;
-  height: 7rem;
-  width: 5rem;
-  left: 5rem;
-  top: 5rem;
-}
-.header__box {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  position: absolute;
-  top: 40%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 100%;
-  text-align: center;
-}
-.header__box__button {
-  width: 27.7rem;
-  height: 5.4rem;
+body {
+  font-family: "Roboto";
+  font-weight: 400;
+  color: #777777;
+  font-size: 1.6rem;
+  letter-spacing: 0.2rem;
 }
 
 .tittle-first {
@@ -141,76 +183,35 @@ body {
           animation-fill-mode: backwards;
 }
 
-@-webkit-keyframes btnToUp {
-  0% {
-    opacity: 0;
-    transform: translateY(5rem);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0rem);
-  }
+.header {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 95vh;
+  background: linear-gradient(90deg, rgba(186, 133, 84, 0.7) 0.03%, rgba(0, 0, 0, 0.7) 99.94%), url("../img/header-bg.jpg") center/cover no-repeat;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%);
+          clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%);
 }
-
-@keyframes btnToUp {
-  0% {
-    opacity: 0;
-    transform: translateY(5rem);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0rem);
-  }
+.header__logo {
+  position: absolute;
+  height: 7rem;
+  width: 5rem;
+  left: 5rem;
+  top: 5rem;
 }
-@-webkit-keyframes leftToRight {
-  0% {
-    opacity: 0;
-    transform: translateX(-10rem);
-  }
-  85% {
-    transform: translateX(1rem);
-  }
-  100% {
-    opacity: 1;
-    transform: translateX(0rem);
-  }
+.header__box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  text-align: center;
 }
-@keyframes leftToRight {
-  0% {
-    opacity: 0;
-    transform: translateX(-10rem);
-  }
-  85% {
-    transform: translateX(1rem);
-  }
-  100% {
-    opacity: 1;
-    transform: translateX(0rem);
-  }
-}
-@-webkit-keyframes rightToLeft {
-  0% {
-    opacity: 0;
-    transform: translateX(10rem);
-  }
-  85% {
-    transform: translateX(-1rem);
-  }
-  100% {
-    opacity: 1;
-    transform: translateX(0rem);
-  }
-}
-@keyframes rightToLeft {
-  0% {
-    opacity: 0;
-    transform: translateX(10rem);
-  }
-  85% {
-    transform: translateX(-1rem);
-  }
-  100% {
-    opacity: 1;
-    transform: translateX(0rem);
-  }
+.header__box__button {
+  width: 27.7rem;
+  height: 5.4rem;
 }
