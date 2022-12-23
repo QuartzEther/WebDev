@@ -316,6 +316,112 @@ body {
   display: inline-block;
 }
 
+.card-tour {
+  height: 52rem;
+  perspective: 150rem;
+  moz-perspective: 150rem;
+  position: relative;
+}
+.card-tour__side {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  transition: all 1s ease;
+  color: white;
+  height: 52rem;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+.card-tour__side_front {
+  box-shadow: 0rem 0.4rem 0.4rem rgba(0, 0, 0, 0.3);
+}
+.card-tour__side_back {
+  box-shadow: 0rem 0.4rem 0.4rem rgba(0, 0, 0, 0.3);
+  transform: rotateY(-180deg);
+  background: linear-gradient(120deg, #ba8554, #a14f03);
+}
+.card-tour:hover .card-tour__side_front {
+  transform: rotateY(180deg);
+}
+.card-tour:hover .card-tour__side_back {
+  transform: rotateY(0deg);
+}
+.card-tour__img {
+  background-blend-mode: hard-light;
+  height: 24rem;
+  -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 80%);
+          clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 80%);
+}
+.card-tour__img_1 {
+  background: #ba8554 url("../img/card-1.png") center/cover no-repeat;
+}
+.card-tour__img_2 {
+  background: #ba8554 url("../img/card-2.png") center/cover no-repeat;
+}
+.card-tour__img_3 {
+  background: #ba8554 url("../img/card-3.png") center/cover no-repeat;
+}
+.card-tour__tittle {
+  font-size: 2.8rem;
+  letter-spacing: 0.2rem;
+  text-transform: uppercase;
+  text-align: right;
+  position: absolute;
+  font-weight: 300;
+  top: 18rem;
+  right: 0rem;
+}
+.card-tour__span {
+  background: linear-gradient(90deg, #ba8554, #a14f03);
+  padding: 1rem 2rem 0.3rem 2rem;
+}
+.card-tour__span_2 {
+  position: absolute;
+  top: 3.4rem;
+  right: 0;
+  padding-bottom: 1rem;
+}
+.card-tour__descr ul {
+  list-style: none;
+  margin: 0 auto;
+  width: 75%;
+  text-align: center;
+}
+.card-tour__descr ul li {
+  font-size: 1.6rem;
+  letter-spacing: 0.2rem;
+  color: #777777;
+  border-bottom: 1px solid #777777;
+  display: inline-block;
+}
+.card-tour__descr ul li:not(:last-child) {
+  margin-bottom: 2rem;
+}
+.card-tour__backSide-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.card-tour__text {
+  margin-bottom: 8rem;
+  letter-spacing: 0.2rem;
+  text-transform: uppercase;
+  text-align: center;
+  color: #ffffff;
+}
+.card-tour__text_1 {
+  font-size: 1.6rem;
+  font-weight: 300;
+}
+.card-tour__text_2 {
+  font-size: 6rem;
+  font-weight: 500;
+}
+
 .row {
   max-width: 114rem;
   margin: 0 auto;
@@ -403,4 +509,8 @@ body {
   background: linear-gradient(90deg, rgba(186, 133, 84, 0.7) 0.03%, rgba(0, 0, 0, 0.7) 99.94%), url("../img/adventure-section.png") center/cover no-repeat;
   -webkit-clip-path: polygon(0% 0%, 100% 15%, 100% 100%, 0% 85%);
           clip-path: polygon(0% 0%, 100% 15%, 100% 100%, 0% 85%);
+}
+
+.section-tour {
+  padding: 8.5rem 0;
 }
