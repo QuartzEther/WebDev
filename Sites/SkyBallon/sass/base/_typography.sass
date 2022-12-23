@@ -2,7 +2,7 @@ body
     font-family: 'Roboto'
     font-weight: 400
     color: $color_grey
-    font-size: 1.6rem
+    font-size: $font-size-paragraph
     letter-spacing: .2rem
     
 .tittle-first
@@ -31,3 +31,30 @@ body
         animation-duration: 1.7s
         animation-delay: 1s
         animation-timing-function: ease
+
+.tittle-secondary
+    display: inline-block
+    font-size: $font-size-paragraph-h2
+    letter-spacing: 1rem
+    text-transform: uppercase
+    font-weight: 800
+    background: linear-gradient(90deg, rgba($color_brown_light, 0.7) 0.03%, rgba($color_brown_dark, 0.7) 99.94%)
+    -webkit-background-clip: text
+    color: transparent
+    transition: all .4s
+    backface-visibility: hidden //что бы тень не дергалась
+    &:hover
+        transform: skew(15deg, 2deg) scale(1.1)
+        text-shadow: $shadow-h2
+
+.tittle-third
+    font-size: $font-size-paragraph-h3
+    letter-spacing: .2rem
+    text-transform: uppercase
+    font-weight: 700
+
+.paragraph
+    font-size: $font-size-paragraph
+    letter-spacing: .2rem
+    line-height: 140%
+    font-weight: 400
