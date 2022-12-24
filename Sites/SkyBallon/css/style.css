@@ -422,6 +422,31 @@ body {
   font-weight: 500;
 }
 
+.feedBack-card {
+  width: 75%;
+  background: rgba(255, 255, 255, 0.75);
+  box-shadow: 0rem 0.4rem 0.4rem rgba(0, 0, 0, 0.3);
+  margin: 0 auto;
+  padding: 6rem;
+  transform: skewX(330deg);
+}
+.feedBack-card__img {
+  width: 15rem;
+  height: 15rem;
+  background: green;
+  border-radius: 100rem;
+  overflow: hidden;
+  float: left;
+  margin-right: 4rem;
+  shape-outside: circle(50% at 50% 50%);
+}
+.feedBack-card__img img {
+  height: 100%;
+}
+.feedBack-card > * {
+  transform: skewX(-330deg);
+}
+
 .row {
   max-width: 114rem;
   margin: 0 auto;
@@ -512,5 +537,9 @@ body {
 }
 
 .section-tour {
-  padding: 8.5rem 0;
+  padding: 8.5rem 0 8rem 0;
+}
+
+.section-feedBack {
+  padding: 8rem 0;
 }
