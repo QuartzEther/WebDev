@@ -148,6 +148,11 @@ body {
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
 }
+.tittle-secondary_white {
+  background: #ffffff;
+  -webkit-background-clip: text;
+  color: transparent;
+}
 .tittle-secondary:hover {
   transform: skew(15deg, 2deg) scale(1.1);
   text-shadow: 0rem 0.4rem 0.4rem rgba(0, 0, 0, 0.25);

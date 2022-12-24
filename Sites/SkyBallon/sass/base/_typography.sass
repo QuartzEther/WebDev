@@ -43,6 +43,10 @@ body
     color: transparent
     transition: all .4s
     backface-visibility: hidden //что бы тень не дергалась
+    &_white
+        background: $color-white
+        -webkit-background-clip: text
+        color: transparent
     &:hover
         transform: skew(15deg, 2deg) scale(1.1)
         text-shadow: $shadow-h2
