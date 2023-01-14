@@ -231,7 +231,7 @@ body {
 .btn::after {
   content: "";
   background-color: #ffffff;
-  border-radius: 50px;
+  border-radius: 5rem;
   width: 100%;
   height: 100%;
   display: inline-block;
@@ -256,7 +256,7 @@ body {
   color: #777777;
   text-decoration: none;
   padding: 1rem;
-  border-bottom: 1px #a14f03 solid;
+  border-bottom: 0.1rem #a14f03 solid;
   transition: all 0.5s;
 }
 .btn-text:hover {
@@ -428,12 +428,15 @@ body {
 }
 
 .feedBack-card {
-  width: 75%;
+  width: 80%;
   background: rgba(255, 255, 255, 0.75);
   box-shadow: 0rem 0.4rem 0.4rem rgba(0, 0, 0, 0.3);
   margin: 0 auto;
   padding: 6rem;
   transform: skewX(330deg);
+}
+.feedBack-card > * {
+  transform: skewX(-330deg);
 }
 .feedBack-card__img {
   width: 15rem;
@@ -444,12 +447,34 @@ body {
   float: left;
   margin-right: 4rem;
   shape-outside: circle(50% at 50% 50%);
+  position: relative;
 }
 .feedBack-card__img img {
   height: 100%;
+  transform: scale(1.2);
+  transition: all 0.5s;
 }
-.feedBack-card > * {
-  transform: skewX(-330deg);
+.feedBack-card__name {
+  font-size: 2rem;
+  letter-spacing: 0.2rem;
+  text-transform: uppercase;
+  font-weight: 400;
+  color: #ffffff;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -20%);
+  opacity: 0;
+  transition: all 0.5s;
+}
+.feedBack-card:hover .feedBack-card__name {
+  transform: translate(-50%, -50%);
+  opacity: 1;
+}
+.feedBack-card:hover img {
+  transform: scale(1);
+  filter: blur(0.3rem) brightness(70%);
 }
 
 .row {
