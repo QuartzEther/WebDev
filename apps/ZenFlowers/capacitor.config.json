@@ -1,0 +1,14 @@
+{
+  "appId": "ru.zenflowers",
+  "appName": "ZenFlowers",
+  "webDir": "www",
+  "bundledWebRuntime": false,
+  "plugins": {
+    "CapacitorCookies": {
+      "enabled": true
+    },
+    "SplashScreen": {
+      "launchShowDuration":1200
+    }
+  }
+}
