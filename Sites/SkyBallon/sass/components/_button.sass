@@ -15,6 +15,18 @@
 
         border: none
 
+        @include respond(tab-land)
+            font-size: 1.8rem
+            padding: 1.2rem 3.7rem
+        @include respond(tab-port)
+            padding: 2rem 5rem
+        @media only screen and (max-width:900px), (hover:none)
+            letter-spacing: .3rem
+
+        
+            
+
+
     &:hover
         transform: translateY(-0.4rem)
         box-shadow: $box-shadow
@@ -46,6 +58,5 @@
     &, &:link, &:visited
         background: $color_brown_dark
         color: $color_white
-    &:hover
     &::after
         background: $color_brown_dark
