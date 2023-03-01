@@ -1,0 +1,34 @@
+.footer
+    background-color: $color-blue-dark
+    grid-column: full-start / full-end
+    padding: 8rem 3rem
+    border-top: solid .3rem $color-gray-light
+    @include respond(phone)
+        padding: 8rem 0
+
+
+
+.nav
+    &__list
+        list-style-type: none
+        display: grid
+        grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr))
+        align-items: center
+        justify-items: center
+        grid-gap: 2rem
+        @include respond(phone)
+            grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr))
+    &__link
+        &:link, &:visited
+            font-size: 1.6rem
+            font-weight: 300
+            text-transform: uppercase
+            color: $color-gray-light
+            text-decoration: none
+            text-align: center
+            transition: .3 all
+            display: inline-block
+        &:hover, &:active
+            color: $color-green-dark
+            transform: translateY(-.3rem)
+            

@@ -1,0 +1,120 @@
+.navigation
+    &__toggle
+        display: none
+    &__button
+        height: 7.5rem
+        width: 7.5rem
+        border-radius: 50%
+        position: fixed
+        z-index: 200
+        text-align: center
+        cursor: pointer
+        @include respond(tab-land)
+            position: absolute
+
+
+
+    &__background
+        width: 5.5rem
+        height: 5.5rem
+        border-radius: 50%
+        background: radial-gradient($color-blue-dark, $color-green-dark)
+        position: fixed
+        z-index: 100
+        transition: transform .7s, opacity 1s
+        opacity: 0
+
+    &__nav
+        height: 100vh
+        width: 100%
+        position: fixed
+        top: 0
+        left: 0
+        z-index: 150
+        opacity: 0
+        width: 0
+        transition: all .5s cubic-bezier(0.68, -0.6, 0.32, 1.6)
+    &__list
+        position: absolute
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%)
+        list-style: none
+
+    &__item
+        text-align: center
+        &:not(:last-child)
+            margin-bottom: 5rem
+            
+    &__link
+        &:link, &:visited
+            font-size: 4rem
+            color: $color-gray-light
+            letter-spacing: .5rem
+            text-decoration: none
+            text-transform: uppercase
+            background: linear-gradient(120deg, transparent 0%, transparent 50%, $color-gray-light 50%)
+            background-size: 230%
+            padding: 1rem 2rem
+            transition: .5s all ease
+            display: inline-block
+
+        &:hover, &:active
+            background-position: 100%
+            color: $color-green-dark
+            transform: translateX(1rem)
+
+    &__toggle:checked ~ &__background
+        transform: scale(80)
+        background: radial-gradient($color-blue-dark, $color-green-dark)
+        opacity: 1
+    &__toggle:checked ~ &__nav
+        width: 100%
+        opacity: 1
+
+    &__icon
+        position: relative
+        margin-top: 3.7rem
+        @include respond(tab-land)
+            margin-top: 3rem
+        &,
+        &::before,
+        &::after
+            width: 3.5rem
+            height: .2rem
+            background: $color-gray-light
+            display: inline-block
+            transition: all .2s
+        &::before,
+        &::after
+            content: ""
+            position: absolute
+            left: 0
+        &::before
+            top: -.8rem
+        &::after
+            top: .8rem
+
+    &__button:hover &__icon::before
+        top: -1rem
+        
+
+    &__button:hover &__icon::after
+        top: 1rem
+
+    &__toggle:checked + &__button &__icon
+        background: transparent                
+    &__toggle:checked + &__button &__icon::before
+        top: 0
+        transform: rotate(135deg)
+    &__toggle:checked + &__button &__icon::after
+        top: 0
+        transform: rotate(-135deg)
+
+
+
+    
+
+        
+    
+                

@@ -1,0 +1,54 @@
+.header
+    background-color: $color-blue-dark
+    grid-column: full-start / col-end 6
+    padding: 5rem 5rem 5rem 6rem
+    display: grid
+    grid-template-rows: 1fr min-content minmax(10rem, min-content) 1fr
+    background: url(../img/header-bg.png) center / cover no-repeat
+    @include respond(tab-port)
+        grid-column: full-start / full-end
+    @include respond(phone)
+        overflow: hidden
+        padding:5rem 2rem
+    
+
+    &__btn 
+        align-self: start
+        justify-self: start
+    &__line-text
+        font-size: 1.6rem
+        font-weight: 700
+        color: $color-gray-dark
+        display: grid
+        grid-template-columns: 1fr max-content 1fr
+        align-items: center
+        grid-gap: 2rem
+        margin-bottom: 1.5rem
+        &::before, &::after
+            content: ""
+            height: .1rem
+            background-color: $color-gray-dark
+            display: block
+    &__img
+        display: grid
+        grid-template-columns: repeat(4, 1fr)
+        justify-items: center
+        grid-gap: 2rem
+        @include respond(phone)
+            justify-items: start
+            grid-gap: 0rem
+        img
+            height: 3rem
+
+
+
+
+.logo
+    display: block
+    margin-bottom: 8rem
+    &__img
+        height: 4rem
+        display: block
+        margin: 0 auto
+
+
